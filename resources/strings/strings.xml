@@ -1,0 +1,26 @@
+<strings>
+    <string id="AppName">MapifyApp</string>
+    <string id="AppVersionTitle">Application Version</string>
+
+    <!-- Mapify Data Feed Configuration -->
+    <string id="mapifySettingsGroupTitle">Mapify Settings</string>
+    <string id="mapifySettingsGroupDescription">Configuration settings for the target Mapify account</string>
+
+    <string id="MapifyApiKeyTitle">API Key</string>
+    <string id="MapifyApiKeyPrompt">Please type the Mapify API key</string>
+
+    <string id="MapifyDatafeedTitle">Datafeed</string>
+    <string id="MapifyDatafeedPrompt">Please type the data feed name to where position data will be sent</string>
+
+    <string id="MapifyEnvironmentTitle">Environment</string>
+    <string id="MapifyEnvironmentPrompt">Please select the correct Mapify environment</string>
+    <string id="MapifyEnvironmentDev">Development</string>
+    <string id="MapifyEnvironmentQa">Quality Assurance</string>
+    <string id="MapifyEnvironmentProd">Production</string>
+
+
+    <string id="prompt">Click the select button\nto send your position to Mapify</string>
+
+    <string id="menu_label_1">Mapify Item 1</string>
+    <string id="menu_label_2">Mapify Item 2</string>
+</strings>

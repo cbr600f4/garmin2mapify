@@ -1,0 +1,5 @@
+<layout id="MapifyLayout">
+    <label id="label_message" x="center" y="60" text="@Strings.prompt" color="Graphics.COLOR_WHITE" 
+            justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_XTINY"/>
+    <bitmap id="id_mapify" x="center" y="110" filename="../drawables/mapify.png" />
+</layout>
