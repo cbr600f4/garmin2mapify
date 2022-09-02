@@ -28,7 +28,7 @@ Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](ht
 - In Visual Studio Code, open one of the ```.mc``` files from the ```source```folder in the editor window
 - Press Ctrl-F5 to run without debugging
 - Select the target device from the list of available devices shown
-- [Configure your Connect IQ application settings](./docs/application-settings.md)
+- In your first time running the app in the simulator, [configure your Connect IQ application settings](./docs/application-settings.md)
 - In VS Code, be sure the Debug Console tab is visible (for you to see what's happening)
 - In the simulator, using your mouse cursor click the device button assigned to the Select operation.
 - Check the Debug Console in VS Code. Your position has been sent to the configured Mapify Data feed :-)
