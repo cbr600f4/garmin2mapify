@@ -11,7 +11,7 @@ Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](ht
 > Note: For the best initial experience you can create a Mapify Workflow which sends you an email everytime a message is received from your app.
 - Download and install [Visual Studio Code](https://code.visualstudio.com/)
 - Download and install the [Garmin Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/)
-    - When adding devices to the SDK, be sure to include at least on of the following:
+    - When adding devices to the SDK, be sure to include at least one of the following:
         - Edge 520 Plus
         - Enduro
         - Fenix 6
