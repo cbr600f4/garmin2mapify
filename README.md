@@ -25,7 +25,7 @@ Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](ht
 
 ### Simulator
 
-- In Visual Studio Code, open one of the ```.mc``` files from the ```source```folder in the editor window
+- In Visual Studio Code, open one of the ```.mc``` files from the ```source``` folder in the editor window
 - Press Ctrl-F5 to run without debugging
 - Select the target device from the list of available devices shown
 - In your first time running the app in the simulator, [configure your Connect IQ application settings](./docs/application-settings.md)

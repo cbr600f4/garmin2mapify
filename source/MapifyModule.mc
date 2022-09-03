@@ -94,12 +94,12 @@ module Mapify {
         //! @param data Content from a successful request
         function onReceive(responseCode as Number, data as Dictionary?) as Void {
 
-            System.println("Received a response");
             var msg = "Message published successfully!";
-            if (responseCode != 200 && responseCode != 201) {  
-                msg = "ERROR response: " + responseCode.toString();
+            if (responseCode != 200 && responseCode != 201 && responseCode != -400) {  
+                msg = "HTTP Response -> ERROR " + responseCode.toString();
             }
             System.println(msg);
+            
         }
 
 

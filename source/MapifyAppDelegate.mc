@@ -11,13 +11,13 @@ class MapifyAppDelegate extends WatchUi.BehaviorDelegate {
         WatchUi.BehaviorDelegate.initialize();
     }
 
-    // function onMenu() as Boolean {
-    //     WatchUi.pushView(new Rez.Menus.MainMenu(), new MapifyAppMenuDelegate(), WatchUi.SLIDE_UP);
-    //     return true;
-    // }
+    function onMenu() as Boolean {
+        WatchUi.pushView(new Rez.Menus.MainMenu(), new MapifyAppMenuDelegate(), WatchUi.SLIDE_UP);
+        return true;
+    }
 
     function onSelect() as Boolean{
-        System.println("Clicked the select button");
+        System.println("BUTTON -> Clicked the select button");
 
         var position = Position.getInfo();
         // Utils.printPosition(position);

@@ -1,4 +1,4 @@
 <menu id="MainMenu">
-    <menu-item id="item_1" label="@Strings.menu_label_1" />
-    <menu-item id="item_2" label="@Strings.menu_label_2" />
+    <menu-item id="item_manual_mode" label="@Strings.menu_manual_mode" />
+    <menu-item id="item_automatic_mode" label="@Strings.menu_automatic_mode" />
 </menu>

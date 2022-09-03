@@ -69,8 +69,6 @@ module Utils {
 
         positionString += "}";
 
-        System.println(positionString);
-
         return positionString;
     }
 

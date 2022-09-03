@@ -1,4 +1,5 @@
 <strings>
+    <!-- Application -->
     <string id="AppName">MapifyApp</string>
     <string id="AppVersionTitle">Application Version</string>
 
@@ -19,8 +20,10 @@
     <string id="MapifyEnvironmentProd">Production</string>
 
 
-    <string id="prompt">Click the select button\nto send your position to Mapify</string>
-
-    <string id="menu_label_1">Mapify Item 1</string>
-    <string id="menu_label_2">Mapify Item 2</string>
+    <!-- Watch Views UI and Menu-->
+    <string id="prompt">Select button to send position\n Menu button to change mode</string>
+    <string id="manual_mode">»» MANUAL mode ««</string>
+    <string id="automatic_mode">»» AUTOMATIC mode ««</string>
+    <string id="menu_manual_mode">Manual Mode</string>
+    <string id="menu_automatic_mode">Automatic Mode</string>
 </strings>
