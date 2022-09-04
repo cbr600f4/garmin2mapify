@@ -25,7 +25,7 @@ class MapifyAppDelegate extends WatchUi.BehaviorDelegate {
         Mapify.setEnvironment(1);
 
         var mapify = new Mapify.DataFeed();
-        mapify.publishMessage(Utils.positionToJsonString(position));
+        mapify.publishMessage(Utils.composeJsonMessage(position));
         return true;
     }
 }

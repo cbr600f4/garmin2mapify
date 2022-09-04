@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "properties": {
+        "datafeedName": {
+            "type": "string"
+        },
+        "message": {
+            "type": "object",
+            "properties": {
+                "uniqueIdentifier": {
+                    "type": "string"
+                },
+                "firmwareVersion": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "isTouchScreen": {
+                    "type": "boolean"
+                },
+                "partNumber": {
+                    "type": "string"
+                },
+                "screenHeight": {
+                    "type": "integer"
+                },
+                "screenWidth": {
+                    "type": "integer"
+                },
+                "screenShape": {
+                    "type": "integer"
+                },
+                "language": {
+                    "type": "integer"
+                },
+                "battery": {
+                    "type": "number"
+                },
+                "batteryInDays": {
+                    "type": "number"
+                },
+                "charging": {
+                    "type": "boolean"
+                },
+                "solarIntensity": {
+                    "type": "number"
+                },
+                "freeMemory": {
+                    "type": "number"
+                },
+                "usedMemory": {
+                    "type": "number"
+                },
+                "totalMemory": {
+                    "type": "number"
+                },
+                "lat": {
+                    "type": "number"
+                },
+                "lon": {
+                    "type": "number"
+                },
+                "speed": {
+                    "type": "number"
+                },
+                "alt": {
+                    "type": "number"
+                },
+                "heading": {
+                    "type": "number"
+                },
+                "accuracy": {
+                    "type": "number"
+                },
+                "timestamp": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
