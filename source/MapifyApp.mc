@@ -1,7 +1,9 @@
 import Toybox.Application;
+import Toybox.Application.Storage;
 import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.Position;
+import Toybox.System;
 
 class MapifyApp extends Application.AppBase {
 
@@ -16,13 +18,13 @@ class MapifyApp extends Application.AppBase {
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         Position.enableLocationEvents(Position.LOCATION_CONTINUOUS, method(:onPosition));
-        System.println("STARTED tracking location...");
+        System.println("STARTED location events");
     }
 
     // onStop() is called when your application is exiting
     function onStop(state as Dictionary?) as Void {
         Position.enableLocationEvents(Position.LOCATION_DISABLE, method(:onPosition));
-        System.println("STOPPED tracking location.");
+        System.println("STOPPED location events");
     }
 
     //! Update the current position
@@ -33,7 +35,7 @@ class MapifyApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        var delegate = new $.MapifyAppDelegate(_mapifyView.method(:onReceive));
+        var delegate = new $.MapifyAppDelegate(_mapifyView);
         return [ _mapifyView, delegate ] as Array<Views or InputDelegates>;
     }
 

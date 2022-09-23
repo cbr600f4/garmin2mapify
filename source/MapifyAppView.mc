@@ -2,17 +2,35 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
 import Toybox.Position;
+import Toybox.Application;
+import Toybox.Application.Storage;
+import Toybox.Timer;
 
 class MapifyAppView extends WatchUi.View {
 
     private var _message as String = "Press the select button";
     private var _lines as Array<String>;
+    private var _publishMode as String;         // The position publishing mode (automatic or manual)
+    private var _publishTimer as Timer.Timer?;  // Timer used in automatic publishing mode
+    private var _positionsCount as Number;      // Total positions published
 
     function initialize() {
         View.initialize();
 
         // Initial value shown until we have position data
         _lines = ["No position info"] as Array<String>;
+
+        // Read position publish mode from storage (default = "MANUAL")
+        var publishMode = Storage.getValue("publish_mode");
+        if (publishMode instanceof String) {
+            _publishMode = publishMode;
+        } else {
+            _publishMode = "MANUAL";
+        }
+
+        _positionsCount = 0;
+
+        System.println("Publish mode: " + _publishMode);
     }
 
     // Load your resources here
@@ -29,6 +47,16 @@ class MapifyAppView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {        
+
+         // Read position publish mode from storage and update UI
+        var publishMode = Storage.getValue("publish_mode");
+        if (publishMode instanceof String) {
+            _publishMode = publishMode;
+        } else {
+            _publishMode = "MANUAL";
+        }
+        updateLabel("label_app_mode", _publishMode + " mode active");
+
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }
@@ -87,6 +115,50 @@ class MapifyAppView extends WatchUi.View {
         // for (var i = 0; i < _lines.size(); ++i) {
         //     System.println(_lines[i]);
         // }
+    }
+
+
+    //! Update a label in the view with new text
+    //! @param labelId The label to update
+    //! @param labelText The text for the label
+    private function updateLabel(labelId as String, labelText as String) as Void {
+        var drawable = View.findDrawableById(labelId);
+        if (drawable != null) {
+            (drawable as Text).setText(labelText);
+        }
+    }
+
+    // Callback for the automated position publishing
+    public function processPosition() as Void {
+
+        System.println("AUTOMATIC -> Publishing position...");
+
+        var position = Position.getInfo();
+        // Utils.printPosition(position);
+
+        Mapify.setEnvironment(1);
+
+        var mapify = new Mapify.DataFeed();
+        mapify.publishMessage(Utils.composeJsonMessage(position));
+
+        _positionsCount++;
+        WatchUi.requestUpdate();
+    }
+
+    // Start automated processing of positions
+    public function startProcessingPositions() as Void{
+        var auxTimer = new Timer.Timer();
+        auxTimer.start(method(:processPosition), 500, true);
+
+        _publishTimer = auxTimer;
+    }
+    
+    // Stop automated processing of positions
+    public function stopProcessingPositions() as Void {
+        var auxTimer = _publishTimer;
+        if (auxTimer != null) {
+            auxTimer.stop();
+        }
     }
 
 }

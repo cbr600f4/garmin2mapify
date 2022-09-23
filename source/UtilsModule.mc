@@ -90,7 +90,7 @@ module Utils {
                 }
                 else {
                     System.println("Utils.composeMessage -> ERROR: Device unique identifier not available.");
-                    throw new Exception();
+                    throw new Lang.Exception();
                 }
             }
             
@@ -132,7 +132,7 @@ module Utils {
         }
         else {
             System.println("Utils.composeMessage -> ERROR: Device settings not available.");
-            throw new Exception();
+            throw new Lang.Exception();
         }
 
 
@@ -183,7 +183,7 @@ module Utils {
         }
         else {
             System.println("Utils.composeMessage -> ERROR: Device system stats not available.");
-            throw new Exception();
+            throw new Lang.Exception();
         }
 
 
