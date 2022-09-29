@@ -5,6 +5,7 @@ import Toybox.Position;
 import Toybox.Application;
 import Toybox.Application.Storage;
 import Toybox.Timer;
+using Utils;
 
 class MapifyAppView extends WatchUi.View {
 
@@ -56,6 +57,9 @@ class MapifyAppView extends WatchUi.View {
             _publishMode = "MANUAL";
         }
         updateLabel("label_app_mode", _publishMode + " mode active");
+
+        var env = Utils.readKeyNumber(Application.AppBase, "MapifyEnvironment", 1);
+        Mapify.setEnvironment(env);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -135,8 +139,6 @@ class MapifyAppView extends WatchUi.View {
 
         var position = Position.getInfo();
         // Utils.printPosition(position);
-
-        Mapify.setEnvironment(1);
 
         var mapify = new Mapify.DataFeed();
         mapify.publishMessage(Utils.composeJsonMessage(position));

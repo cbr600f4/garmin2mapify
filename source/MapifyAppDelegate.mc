@@ -28,7 +28,8 @@ class MapifyAppDelegate extends WatchUi.BehaviorDelegate {
         var position = Position.getInfo();
         // Utils.printPosition(position);
 
-        Mapify.setEnvironment(1);
+        var env = Utils.readKeyNumber(Application.AppBase, "MapifyEnvironment", 1);
+        Mapify.setEnvironment(env);
 
         var mapify = new Mapify.DataFeed();
         mapify.publishMessage(Utils.composeJsonMessage(position));
