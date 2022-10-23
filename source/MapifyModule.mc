@@ -50,13 +50,13 @@ module Mapify {
 
             switch(mapifyEnvironment){
                 case 0:
-                    url = "https://api-dev.mapify.ai/datafeeds/publish";
+                    url = "https://api-dev.mapify.ai/datafeeds/asyncPublish";
                     break;
                 case 1:
-                    url = "https://api-qa.mapify.ai/datafeeds/publish";
+                    url = "https://api-qa.mapify.ai/datafeeds/asyncPublish";
                     break;
                 case 2:
-                    url = "https://api.mapify.ai/datafeeds/publish";
+                    url = "https://api.mapify.ai/datafeeds/asyncPublish";
                     break;
                 default:
                     throw new MapifyException("Invalid Mapify environment specified");
@@ -97,6 +97,9 @@ module Mapify {
             var msg = "Message published successfully!";
             if (responseCode != 200 && responseCode != 201 && responseCode != -400) {  
                 msg = "HTTP Response -> ERROR " + responseCode.toString();
+            }
+            else if (responseCode == -400){
+                msg = "HTTP Response -> WARNING " + responseCode.toString();
             }
             System.println(msg);
             
