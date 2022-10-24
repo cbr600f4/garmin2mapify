@@ -150,7 +150,7 @@ class MapifyAppView extends WatchUi.View {
     // Start automated processing of positions
     public function startProcessingPositions() as Void{
         var auxTimer = new Timer.Timer();
-        auxTimer.start(method(:processPosition), 500, true);
+        auxTimer.start(method(:processPosition), 1000, true);
 
         _publishTimer = auxTimer;
     }
