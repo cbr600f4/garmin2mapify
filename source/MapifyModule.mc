@@ -3,6 +3,7 @@ import Toybox.Application;
 import Toybox.Communications;
 import Toybox.Lang;
 using Utils;
+using GarminDevice;
 
 module Mapify {
 
@@ -44,7 +45,7 @@ module Mapify {
         function initialize(){
         }
 
-        function publishMessage(message as String) as Void {
+        function publishMessage(message as Lang.Dictionary) as Void {
 
             var url = "";
 
@@ -53,6 +54,7 @@ module Mapify {
                     url = "https://api-dev.mapify.ai/datafeeds/asyncPublish";
                     break;
                 case 1:
+                    // url = "https://webhook.site/8a47d495-c00a-4e85-8d24-2c69b926b66d";
                     url = "https://api-qa.mapify.ai/datafeeds/asyncPublish";
                     break;
                 case 2:
@@ -71,6 +73,7 @@ module Mapify {
                 :method => Communications.HTTP_REQUEST_METHOD_POST,
                 :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
                 :headers => {
+                    "Accept" => "*/" + "*",
                     "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON,   //REQUEST_CONTENT_TYPE_URL_ENCODED,
                     "Map-Api-Key" => mapifyApiKey
                 }

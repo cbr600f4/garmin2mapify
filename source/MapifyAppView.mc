@@ -141,7 +141,7 @@ class MapifyAppView extends WatchUi.View {
         // Utils.printPosition(position);
 
         var mapify = new Mapify.DataFeed();
-        mapify.publishMessage(Utils.composeJsonMessage(position));
+        mapify.publishMessage(Utils.composeJsonPayload(position).toDictionary());
 
         _positionsCount++;
         WatchUi.requestUpdate();

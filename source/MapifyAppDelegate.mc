@@ -32,7 +32,7 @@ class MapifyAppDelegate extends WatchUi.BehaviorDelegate {
         Mapify.setEnvironment(env);
 
         var mapify = new Mapify.DataFeed();
-        mapify.publishMessage(Utils.composeJsonMessage(position));
+        mapify.publishMessage(Utils.composeJsonPayload(position).toDictionary());
         return true;
     }
 }
