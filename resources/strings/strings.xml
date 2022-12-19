@@ -19,6 +19,9 @@
     <string id="MapifyEnvironmentQa">Quality Assurance</string>
     <string id="MapifyEnvironmentProd">Production</string>
 
+    <string id="MapifyAutoPositionIntervalTitle">Automatic position communication interval (seconds)</string>
+    <string id="MapifyAutoPositionIntervalPrompt">Please type the number of seconds between each position being sent to Mapify in Auto Mode</string>
+    <string id="MapifyAutoPositionIntervalErrorMsg">The number of seconds must be between 1 and 3600</string>
 
     <!-- Watch Views UI and Menu-->
     <string id="prompt">Select button to send position\n Menu button to change mode</string>

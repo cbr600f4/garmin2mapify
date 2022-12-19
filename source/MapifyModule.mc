@@ -13,6 +13,7 @@ module Mapify {
         if(environment >= 0 && environment <= 2){
             mapifyEnvironment = environment;
         } else {
+            System.println("Invalid environment value provided:" + environment);
             mapifyEnvironment = Utils.readKeyNumber(Application.AppBase, "MapifyEnvironment", 1);
         }
     }
@@ -23,6 +24,7 @@ module Mapify {
         if(apiKey.length != 0){
             mapifyApiKey = apiKey;
         } else {
+            System.println("Empty API key value provided. API key must be a valid Mapify API key.");
             mapifyApiKey = Utils.readKeyString(Application.AppBase, "MapifyApiKey", "");
         }
     }
@@ -33,7 +35,19 @@ module Mapify {
         if(datafeed.length != 0){
             mapifyDatafeed = datafeed;
         } else {
+            System.println("Empty data feed value provided. Data feed must be an existing and valid data feed name.");
             mapifyDatafeed = Utils.readKeyString(Application.AppBase, "MapifyDatafeed", "");
+        }
+    }
+
+    // Sets the number of seconds between sending device location messages to Mapify in Auto Mode, based on the respective setting in the user's Garmin Connect application.
+    var positionCommunicationInterval as Number = Utils.readKeyNumber(Application.AppBase, "positionCommunicationInterval", 1);
+    function setPositionCommunicationInterval(positionInterval as Number) as Void {
+        if(positionInterval > 0 && positionInterval <= 3600){
+            positionCommunicationInterval = positionInterval;
+        } else {
+            System.println("Invalid position communication interval value provided:" + positionInterval + " - Value must be between 1 and 3600 seconds.");
+            positionCommunicationInterval = Utils.readKeyNumber(Application.AppBase, "positionCommunicationInterval", 1);
         }
     }
 
