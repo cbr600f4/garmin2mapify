@@ -1,7 +1,7 @@
 <resources>
 
     <properties>
-        <property id="appVersion" type="string">0.0.3 Beta</property>
+        <property id="appVersion" type="string">1.0.0</property>
         <property id="MapifyDatafeed" type="string"></property>
         <property id="MapifyApiKey" type="string"></property>
         <property id="MapifyEnvironment" type="number">0</property>

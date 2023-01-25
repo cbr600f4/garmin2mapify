@@ -11,9 +11,10 @@ class MapifyAppView extends WatchUi.View {
 
     private var _message as String = "Press the select button";
     private var _lines as Array<String>;
-    private var _publishMode as String;         // The position publishing mode (automatic or manual)
-    private var _publishTimer as Timer.Timer?;  // Timer used in automatic publishing mode
-    private var _positionsCount as Number;      // Total positions published
+    private var _publishMode as String;                 // The position publishing mode (automatic or manual)
+    private var _publishTimer as Timer.Timer?;          // Timer used in automatic publishing mode
+    private var _positionsCount as Number;              // Total positions published
+    private const AUTO_SEND_INTERVAL as Number = 5;     // Default number of seconds between sending data in automatic mode
 
     function initialize() {
         View.initialize();
@@ -149,7 +150,7 @@ class MapifyAppView extends WatchUi.View {
 
     // Start automated processing of positions
     public function startProcessingPositions() as Void{
-        var positionInterval = Utils.readKeyNumber(Application.AppBase, "positionCommunicationInterval", 1);
+        var positionInterval = Utils.readKeyNumber(Application.AppBase, "positionCommunicationInterval", AUTO_SEND_INTERVAL);
 
         var auxTimer = new Timer.Timer();
         auxTimer.start(method(:processPosition), positionInterval*1000, true);

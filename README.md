@@ -1,7 +1,10 @@
 # garmin2mapify
-Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) which sends the device location to a [Mapify](https://www.mapify.ai/) data feed, just for fun and learning.
+Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) exemplifying who to send device data and location to a [Mapify](https://www.mapify.ai/) data feed, allowing you to leverage Mapify to build amazing Garmin wearable devices based solutions.
+
+> IMPORTANT: This example does not collect or send any personal information to Mapify, only technical and watch sensor data is being used. 
 
 ![Mapify simple Connect IQ app to send device position to a data feed](./docs/img/mapify-iq-app.png)
+
 
 
 ## Requirements
@@ -38,3 +41,7 @@ Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](ht
 
 - Install the app from the [Connect IQ Store](https://apps.garmin.com/en-US/)
 - [How to Access the Settings of Downloaded Connect IQ Content Using the Garmin Connect App](https://support.garmin.com/en-US/?faq=SPo0TFvhQO04O36Y5TYRh5)
+
+- On your Garmin device, use a press of the Menu button to select between Manual and Automatic mode.
+    - Manual mode: You need to press the Select button on your watch for your current sensor data and location to be sent to Mapify
+    - Automatic mode: Wacth sensor data and location is automatically sent to Mapify regularly, using the time interval configured in the Application Settings in the Garmin Connect app (default is 3600 seconds).
