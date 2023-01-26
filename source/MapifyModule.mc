@@ -68,7 +68,6 @@ module Mapify {
                     url = "https://api-dev.mapify.ai/datafeeds/asyncPublish";
                     break;
                 case 1:
-                    // url = "https://webhook.site/8a47d495-c00a-4e85-8d24-2c69b926b66d";
                     url = "https://api-qa.mapify.ai/datafeeds/asyncPublish";
                     break;
                 case 2:
