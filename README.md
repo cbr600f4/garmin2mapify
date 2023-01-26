@@ -40,7 +40,8 @@ Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](ht
 ### Device 
 
 - Install the app from the [Connect IQ Store](https://apps.garmin.com/en-US/)
-- Configure your Mapify API Key and other settings on your Garmin Connect app [How to Access the Settings of Downloaded Connect IQ Content Using the Garmin Connect App](https://support.garmin.com/en-US/?faq=SPo0TFvhQO04O36Y5TYRh5)
+- Configure your Mapify API Key and other settings on your Garmin Connect app 
+    - [How to Access the Settings of Downloaded Connect IQ Content Using the Garmin Connect App](https://support.garmin.com/en-US/?faq=SPo0TFvhQO04O36Y5TYRh5)
 
 - On your Garmin device, use a press of the Menu button to select between Manual and Automatic mode.
     - Manual mode: You need to press the Select button on your watch for your current sensor data and location to be sent to Mapify
