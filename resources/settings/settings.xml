@@ -4,8 +4,8 @@
         <property id="appVersion" type="string">1.0.0</property>
         <property id="MapifyDatafeed" type="string"></property>
         <property id="MapifyApiKey" type="string"></property>
-        <property id="MapifyEnvironment" type="number">0</property>
-         <property id="positionCommunicationInterval" type="number">1</property>
+        <property id="MapifyEnvironment" type="number">2</property>
+        <property id="positionCommunicationInterval" type="number">1</property>
     </properties>
 
     <settings>
@@ -28,13 +28,15 @@
                 <settingConfig type="numeric" required="true" min="1" max="3600" errorMessage="@Strings.MapifyAutoPositionIntervalErrorMsg"/>
             </setting>
 
-            <setting propertyKey="@Properties.MapifyEnvironment" title="@Strings.MapifyEnvironmentTitle" prompt="@Strings.MapifyEnvironmentPrompt">
+            <!-- During development and tests, it's nice to be able to select the Mapify target environment -->
+            <!--<setting propertyKey="@Properties.MapifyEnvironment" title="@Strings.MapifyEnvironmentTitle" prompt="@Strings.MapifyEnvironmentPrompt">
                 <settingConfig type="list" readonly="true" required="true">
                     <listEntry value="0">@Strings.MapifyEnvironmentDev</listEntry>
                     <listEntry value="1">@Strings.MapifyEnvironmentQa</listEntry>
                     <listEntry value="2">@Strings.MapifyEnvironmentProd</listEntry>
                 </settingConfig>
-            </setting>
+            </setting>-->
+
         </group>
 
     </settings>
