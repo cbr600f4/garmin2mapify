@@ -37,7 +37,7 @@ Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](ht
 - Check the Debug Console in VS Code. Your position has been sent to the configured Mapify Data feed :-)
 
 
-### Device **(Work in Progress, not available yet)**
+### Device 
 
 - Install the app from the [Connect IQ Store](https://apps.garmin.com/en-US/)
 - [How to Access the Settings of Downloaded Connect IQ Content Using the Garmin Connect App](https://support.garmin.com/en-US/?faq=SPo0TFvhQO04O36Y5TYRh5)
