@@ -1,5 +1,5 @@
 # garmin2mapify
-Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) exemplifying who to send device data and location to a [Mapify](https://www.mapify.ai/) data feed, allowing you to leverage Mapify to build amazing Garmin wearable devices based solutions.
+Extremely simple [Connect IQ](https://apps.garmin.com) app made in [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) demonstrating how to send device data and its location to a [Mapify](https://www.mapify.ai/) data feed, allowing you to leverage Mapify to build amazing Garmin wearable devices based solutions.
 
 > IMPORTANT: This example does not collect or send any personal information to Mapify, only technical and watch sensor data is being used. 
 
